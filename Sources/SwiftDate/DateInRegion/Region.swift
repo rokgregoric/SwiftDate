@@ -53,6 +53,10 @@ public struct Region: Decodable, Encodable, Equatable, Hashable, CustomStringCon
 		})
 	}
 
+	public init(calendar: Calendar) {
+		self.calendar = calendar
+	}
+
 	/// Initialize a new Region by reading the `timeZone`,`calendar` and `locale`
 	/// parameters from the passed `DateComponents` instance.
 	/// For any `nil` parameter the correspondent `SwiftDate.defaultRegion` is used instead.
